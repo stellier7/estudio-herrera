@@ -53,6 +53,8 @@ const CONFIG = {
 
   instagramHandle: "@eestudio_hherrera",
   instagramUrl: "https://www.instagram.com/eestudio_hherrera",
+  facebookUrl: "https://www.facebook.com/profile.php?id=61555703168558",
+  facebookLabel: "Facebook",
 
   mapsUrl: "https://maps.app.goo.gl/PR8RLDJ6jXosQWdd6",
   mapsEmbedUrl: "https://maps.google.com/maps?q=14.4712361,-87.6158268&z=16&hl=es&output=embed",
@@ -215,7 +217,6 @@ const CONFIG = {
     { src: "images/unas-arte.jpg", alt: "Diseño de uñas" },
     { src: "images/unas-rosas.jpg", alt: "Esmaltado rosa" },
     { src: "images/recogido.jpg", alt: "Recogido con trenzas" },
-    { src: "images/salon-unas.jpg", alt: "Atención de uñas en el salón" },
   ],
 
   testimonials: [
