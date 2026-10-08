@@ -1,13 +1,11 @@
 # Estudio Herrera
 
-Single-page demo for **Estudio Herrera**, copied from the [luxury salon template](https://github.com/stellier7/luxury-salon-template).
+Single-page site for **Estudio Herrera** (Comayagua), based on the [luxury salon template](https://github.com/stellier7/luxury-salon-template).
 
-Open `index.html` in a browser. No build step.
-
-The page still shows the template brand (**MAISON VELA**) until client copy and photos are dropped into `config.js`.
+Open `index.html` in a browser. No build step. The root `index.html` is ready for Vercel.
 
 ## Customize
 
-Edit **`config.js`** for copy, colors, services, ritual steps, gallery URLs, and contact details.
+Edit **`config.js`** only. Business facts, services, hours, colors, and photo slots live there.
 
-Put real salon photos in `images/` and point `config.js` at them (hero, visit portrait, ritual strip, and gallery).
+Gallery tiles are `[FOTO]` placeholders. Drop salon photos in `images/` and set each gallery item to `{ src: "images/foto.jpg", alt: "..." }`. Set `heroImage` the same way when a hero photo is ready.

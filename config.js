@@ -1,160 +1,249 @@
 // ============================================================
-// MAISON VELA — Plantilla para Salón / Spa de Uñas / Spa
-// Edita todo en este archivo para adaptar el sitio a un nuevo
-// cliente. Para un re-skin normal, no debería hacer falta
-// cambiar nada fuera de este archivo.
+// ESTUDIO HERRERA — todo el contenido del cliente vive aquí.
+// No inventar servicios, precios, equipo, testimonios ni premios.
+// Fotos: reemplaza los placeholders de gallery y heroImage.
 // ============================================================
 
 const CONFIG = {
   lang: "es",
 
-  // ---- Marca ----
-  brandName: "MAISON VELA",
-  brandNameShort: "VELA",
-  tagline: "Cabello. Uñas. Piel.",
-  heroEyebrow: "Una Casa de Belleza Privada",
-  heroHeadlineLines: ["El Ritual", "de Ser Vista"],
-  heroSub:
-    "Donde cada cita es una ocasión. Cabello, uñas y piel — atendidos con el cuidado que se nota.",
+  brandName: "Estudio Herrera",
+  legalName: "Estudio Herrera S. de R. L.",
+  tagline: "Es tiempo de brillar",
+  specialty: "Salón de belleza",
+  heroEyebrow: "Salón de belleza en Comayagua",
+  heroHeadlineLines: ["Estudio", "Herrera"],
+  heroSub: "Es tiempo de brillar",
 
-  // ---- Contacto / Reservas ----
-  whatsappNumber: "50499999999", // código de país + número, sin + ni espacios
-  whatsappDefaultMessage: "¡Hola! Me gustaría reservar una cita en MAISON VELA.",
-  phoneDisplay: "+504 9999-9999",
-  address: "Blvd. Morazán, Torre Sky, Local 4 — Tegucigalpa",
+  whatsappNumber: "50432799695",
+  whatsappDefaultMessage: "Hola, quisiera agendar una cita en Estudio Herrera",
+  phoneDisplay: "+504 3279-9695",
+  phoneE164: "+50432799695",
+
+  address: {
+    full: "Golf Club, Edificio Bellini, 2do. Nivel, Comayagua 12101, Honduras",
+    street: "Golf Club, Edificio Bellini, 2do. Nivel",
+    locality: "Comayagua",
+    postalCode: "12101",
+    country: "HN",
+  },
+
+  // Horario publicado en Google Places. Aún no confirmado con el salón.
   hours: [
-    { day: "Mar — Vie", time: "10:00 AM – 7:00 PM" },
-    { day: "Sábado", time: "9:00 AM – 6:00 PM" },
-    { day: "Dom — Lun", time: "Cerrado" },
+    {
+      day: "Lun — Vie",
+      time: "8:00 AM – 5:00 PM",
+      days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "17:00",
+    },
+    { day: "Sábado", time: "Cerrado" },
+    {
+      day: "Domingo",
+      time: "9:00 AM – 4:00 PM",
+      days: ["Sunday"],
+      opens: "09:00",
+      closes: "16:00",
+    },
   ],
-  instagramHandle: "@maisonvela",
-  instagramUrl: "https://instagram.com",
 
-  // ---- Colores (estudio monocromo — edita solo los valores) ----
+  instagramHandle: "@eestudio_hherrera",
+  instagramUrl: "https://www.instagram.com/eestudio_hherrera",
+
+  mapsUrl: "https://maps.app.goo.gl/PR8RLDJ6jXosQWdd6",
+  mapsEmbedUrl: "https://maps.google.com/maps?q=14.4712361,-87.6158268&z=16&hl=es&output=embed",
+  geo: { latitude: 14.4712361, longitude: -87.6158268 },
+
   colors: {
     cream: "#000000",
     cream2: "#0A0A0A",
     ink: "#FFFFFF",
-    inkSoft: "#A8A8A8",
-    inkFaint: "#666666",
-    accent: "#FFFFFF",
-    accentInv: "#000000",
-    accentHover: "rgba(255,255,255,0.10)",
-    gray: "#1A1A1A",
-    grayLight: "#111111",
-    line: "rgba(255,255,255,0.14)",
-    lineStrong: "rgba(255,255,255,0.28)",
+    inkSoft: "#C8B8BE",
+    inkFaint: "#8A737C",
+    accent: "#E8B4C4",
+    accentInv: "#1A1014",
+    accentHover: "rgba(232,180,196,0.14)",
+    gray: "#1A1216",
+    grayLight: "#140E11",
+    line: "rgba(232,180,196,0.22)",
+    lineStrong: "rgba(232,180,196,0.45)",
   },
 
-  // ---- Servicios ----
+  // Menú copiado de las piezas del salón. Ninguna trae precio.
   services: [
     {
+      label: "Bodas",
+      name: "Paquetes para Bodas",
+      wide: true,
+      groups: [
+        {
+          name: "Paquete Plata",
+          items: [
+            "Peinado",
+            "Hidratación preparación de la piel",
+            "Hidratación parches hidrogel para ojos",
+            "Diseño y modelado de cejas",
+            "Maquillaje de larga duración Línea Profesional",
+            "Pestañas postizas",
+          ],
+        },
+        {
+          name: "Paquete Oro",
+          items: [
+            "Lavado, secado y peinado",
+            "Hidratación y preparación de la piel",
+            "Hidratación parches hidrogel para ojos",
+            "Hidratación y exfoliacion de labios",
+            "Diseño y modelado de cejas",
+            "Maquillaje de larga duración Profesional",
+            "Pestañas postizas",
+            "Prueba de peinado y maquillaje (Opcional)",
+          ],
+        },
+      ],
+    },
+    {
+      label: "Spa manos pies",
+      name: "Spa manos pies",
+      items: [
+        "Retirado Cuticula",
+        "Retirado de esmaltado",
+        "Esmaltado normal",
+        "Esmaltado semipermanente",
+        "Aplicación calcio",
+        "Aplicación de Acrílico",
+        "Aplicación Acryl Gel",
+        "Diseño en uñas",
+        "Aplicación colágeno",
+        "Limado callosidades",
+        "Exfoliación",
+        "Masaje relajante",
+        "Aplicación Gel Ohhh",
+        "Aplicación Parafina",
+        "Aplicación Baño de Leche",
+        "Detox spa",
+        "Spa normal",
+        "Spa Clínico Podológico",
+      ],
+    },
+    {
       label: "Cabello",
-      name: "Estudio de Cabello",
-      description:
-        "Corte, color y acabado con estilistas formadas en las técnicas más actuales de Miami y Europa.",
-      items: ["Corte y peinado signature", "Balayage y corrección de color", "Barra de blowout", "Peinado para bodas y eventos"],
+      name: "Cabello",
+      items: [
+        "Lavado de cabello",
+        "Secado de cabello",
+        "Planchado de cabello",
+        "Corte de cabello",
+        "Aplicación de tintes",
+        "Aplicación de tratamientos",
+        "Keratina",
+        "Nanoplastia",
+        "Ondas",
+        "Trenzas",
+        "Peinado sencillo",
+        "Peinado elaborado",
+      ],
     },
     {
-      label: "Uñas",
-      name: "Atelier de Uñas",
-      description:
-        "Detalle pintado a mano, acabados de larga duración y un estándar de sanitización que no negociamos.",
-      items: ["Gel-X y builder gel", "Manicura rusa", "Nail art pintado a mano", "Ritual de pedicura spa"],
+      label: "Depilación con cera",
+      name: "Depilación con cera",
+      wide: true,
+      groups: [
+        {
+          name: "Facial",
+          items: ["Rostro completo", "Cejas", "Bigote", "Barbilla"],
+        },
+        {
+          name: "Corporal",
+          items: [
+            "Axilas",
+            "Abdomen",
+            "Espalda",
+            "Área de bikini",
+            "Bikini brasileño",
+            "Medias piernas",
+            "Piernas completas",
+            "Brazos",
+            "Dedos pies y manos",
+          ],
+        },
+      ],
     },
     {
-      label: "Piel",
-      name: "Piel & Spa",
-      description:
-        "Faciales y tratamientos corporales diseñados para tu piel, no un menú genérico.",
-      items: ["Facial signature", "Dermaplaning", "Masaje con piedras calientes", "Envoltura corporal reductora"],
+      label: "Pestañas y Cejas",
+      name: "Pestañas y Cejas",
+      items: [
+        "Lifting de pestañas",
+        "Extensión de pestañas clásicas, Hibridas, volumen, mega volumen y hawaianas",
+        "Pestañas pelo a pelo",
+        "Retoque de pestañas pelo a pelo",
+        "Retirado de pestañas",
+        "Pestañas postizas",
+        "Laminado de cejas",
+        "Depilación, perfilado y modelado de cejas",
+        "Definición y tintado de cejas con Henna",
+      ],
+    },
+    {
+      label: "Maquillaje",
+      name: "Maquillaje",
+      items: [
+        "Maquillaje Social",
+        "Maquillaje para Novias",
+        "Maquillaje para 15 años",
+        "Maquillaje de día / noche",
+        "Maquillaje para sesión fotográfica",
+        "Maquillaje Artístico",
+        "Prueba de Maquillaje para Novias",
+      ],
     },
   ],
 
-  // ---- Franja ritual (sección de scroll signature) ----
-  ritualSteps: [
-    {
-      time: "01",
-      title: "Llegar",
-      text: "Champagne, toallas tibias y una consulta con tu estilista antes de tocar una sola herramienta.",
-      img: "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1200&auto=format&fit=crop",
-    },
-    {
-      time: "02",
-      title: "Atender",
-      text: "Atención plena, una clienta a la vez — sin sillas doble-reservadas ni acabados apresurados.",
-      img: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
-    },
-    {
-      time: "03",
-      title: "Finalizar",
-      text: "Cada servicio termina igual: revisión en el espejo y tiempo para disfrutar de verdad el resultado.",
-      img: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=1200&auto=format&fit=crop",
-    },
-    {
-      time: "04",
-      title: "Salir Radiante",
-      text: "Reagendamos a tu salida — confirmación por WhatsApp antes de que llegues a la puerta.",
-      img: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?q=80&w=1200&auto=format&fit=crop",
-    },
-  ],
-
-  // ---- Galería ----
   gallery: [
-    "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?q=80&w=900&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1600948836101-f9ffda59d250?q=80&w=900&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?q=80&w=900&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=900&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1470259078422-826894b933aa?q=80&w=900&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=900&auto=format&fit=crop",
+    { placeholder: "[FOTO]" },
+    { placeholder: "[FOTO]" },
+    { placeholder: "[FOTO]" },
+    { placeholder: "[FOTO]" },
+    { placeholder: "[FOTO]" },
+    { placeholder: "[FOTO]" },
   ],
 
-  // ---- Testimonios ----
-  testimonials: [
-    { quote: "El único salón donde nunca he mirado el reloj.", name: "Andrea M." },
-    { quote: "Reservé por WhatsApp a las 11pm, confirmada antes de despertar.", name: "Fernanda R." },
-    { quote: "Se siente como un spa de hotel, no un salón de strip mall.", name: "Carolina V." },
-  ],
+  testimonials: [],
 
-  // ---- Imágenes de ambiente ----
-  heroImage:
-    "https://images.unsplash.com/photo-1522336572468-97b06e8ef143?q=80&w=1800&auto=format&fit=crop",
-  visitImage:
-    "https://images.unsplash.com/photo-1521931961826-fe48677230a5?q=80&w=1400&auto=format&fit=crop",
+  heroImage: "",
+  visitImage: "",
 
-  // ---- Textos de interfaz ----
+  credit: {
+    label: "Desarrollado por",
+    name: "IAGO Digital",
+    url: "https://www.iagodigital.com/",
+  },
+
   ui: {
-    metaDescription: "MAISON VELA — Una casa de belleza privada para cabello, uñas y piel.",
-    navServices: "Servicios",
-    navExperience: "Experiencia",
-    navGallery: "Galería",
-    navVisit: "Visítanos",
-    navBook: "Reservar",
-    openMenu: "Abrir menú",
-    closeMenu: "Cerrar menú",
-    heroCta: "Reservar por WhatsApp",
+    pageTitle: "Estudio Herrera | Salón de Belleza en Comayagua",
+    metaDescription:
+      "Estudio Herrera, salón de belleza en Golf Club, Edificio Bellini, 2do. Nivel, Comayagua. Cabello, maquillaje, pestañas, cejas, spa de manos y pies, depilación con cera y paquetes para bodas. Agenda por WhatsApp.",
+    navBook: "Agendar",
+    heroCta: "Agendar por WhatsApp",
     heroSecondary: "Ver servicios",
     heroScroll: "Desliza",
-    servicesEyebrow: "Lo Que Hacemos",
-    servicesTitle: "Tres salas, un solo estándar.",
-    ritualEyebrow: "La Experiencia",
-    ritualTitle: "Cada visita, el mismo ritual.",
-    galleryEyebrow: "Dentro de la Casa",
-    galleryTitle: "Un espacio hecho para bajar el ritmo.",
-    galleryImageAlt: "Imagen de galería",
-    testimonialsEyebrow: "De Boca en Boca",
-    testimonialsTitle: "Lo que repiten nuestras clientas.",
-    visitEyebrow: "Encuéntranos",
-    visitTitle: "Visita la casa.",
-    visitImageAlt: "Interior del salón",
-    footerEyebrow: "Cuando Quieras",
-    footerTitle: "Reserva tu cita.",
-    footerCta: "Escríbenos por WhatsApp",
+    servicesEyebrow: "Conoce nuestros servicios",
+    servicesTitle: "Servicios",
+    galleryEyebrow: "Galería",
+    galleryTitle: "Fotos del salón",
+    galleryImageAlt: "Foto de Estudio Herrera",
+    visitEyebrow: "Ubicación y horario",
+    visitTitle: "Edificio Bellini, Comayagua",
+    contactEyebrow: "Contacto",
+    contactTitle: "Agenda tu cita",
+    mapCta: "Abrir en Google Maps",
+    mapTitle: "Mapa de Estudio Herrera",
+    footerCta: "Agendar por WhatsApp",
     whatsappLabel: "WhatsApp",
     metaSpecialty: "Especialidad",
     metaHours: "Horario",
     metaContact: "Contacto directo",
-    gallerySoon: "Foto próximamente",
+    gallerySoon: "[FOTO]",
     lightboxLabel: "Vista previa de galería",
     lightboxClose: "Cerrar",
     lightboxPrev: "Anterior",

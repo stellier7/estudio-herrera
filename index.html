@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="description" content="MAISON VELA — Una casa de belleza privada para cabello, uñas y piel.">
+<meta name="description" content="Estudio Herrera, salón de belleza en Golf Club, Edificio Bellini, 2do. Nivel, Comayagua. Cabello, maquillaje, pestañas, cejas, spa de manos y pies, depilación con cera y paquetes para bodas. Agenda por WhatsApp.">
 <meta name="theme-color" content="#000000">
-<title>MAISON VELA — Cabello, Uñas y Piel</title>
+<title>Estudio Herrera | Salón de Belleza en Comayagua</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -67,38 +67,13 @@
   <div class="scroll-cue" id="scroll-cue"><span class="line"></span><span id="hero-scroll"></span></div>
 </header>
 
-<section id="experiencia">
-  <div class="wrap about">
-    <div class="panel-pad">
-      <div class="about-grid">
-        <div class="about-card tilt-el" data-tilt data-reveal="scale">
-          <div class="about-card-inner" id="about-card-inner">
-            <div class="about-card-photo" id="about-photo"></div>
-            <div class="about-card-tag" id="about-tag"></div>
-          </div>
-        </div>
-        <div class="about-copy">
-          <div class="kicker" data-reveal id="ritual-eyebrow"></div>
-          <p class="lede" data-reveal style="--delay:.05s" id="ritual-title"></p>
-          <div id="ritual-body"></div>
-        </div>
-      </div>
-      <div class="ritual-showcase" data-reveal style="--delay:.18s">
-        <div class="ritual-carousel" id="ritual-carousel" tabindex="0">
-          <div class="ritual-carousel-track" id="ritual-track"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="servicios">
   <div class="wrap">
     <div class="section-head">
       <div class="kicker" data-reveal id="services-eyebrow"></div>
       <h2 data-reveal style="--delay:.05s" id="services-title"></h2>
     </div>
-    <div class="services-accordion" id="services-grid"></div>
+    <div class="service-cards" id="services-grid"></div>
   </div>
 </section>
 
@@ -114,35 +89,21 @@
   </div>
 </section>
 
-<section id="testimonios">
+<section id="ubicacion">
   <div class="wrap">
     <div class="section-head">
-      <div class="kicker" data-reveal id="testimonials-eyebrow"></div>
-      <h2 data-reveal style="--delay:.05s" id="testimonials-title"></h2>
+      <div class="kicker" data-reveal id="visit-eyebrow"></div>
+      <h2 data-reveal style="--delay:.05s" id="visit-title"></h2>
     </div>
-    <div class="testimonials-grid" id="testimonials-grid"></div>
-  </div>
-</section>
-
-<section id="visita">
-  <div class="wrap">
-    <div class="contact-grid">
-      <div>
-        <div class="kicker" data-reveal id="visit-eyebrow"></div>
-        <h2 class="contact-title" data-reveal style="--delay:.05s" id="visit-title"></h2>
-        <div class="quote-block" data-reveal style="--delay:.1s" id="quote-block">
-          <p id="quote-text"></p>
-          <div class="who" id="quote-who"></div>
-        </div>
+    <div class="location-grid">
+      <div class="map-frame" data-reveal>
+        <iframe id="map-frame" title="Mapa de Estudio Herrera" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a class="map-link" id="map-link" target="_blank" rel="noopener"></a>
       </div>
-      <div class="contact-card" data-reveal style="--delay:.1s">
+      <div class="contact-card" data-reveal style="--delay:.08s">
         <div class="contact-row">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21c4-3.2 7-6.6 7-10.5A7 7 0 0 0 5 10.5C5 14.4 8 17.8 12 21Z"/><circle cx="12" cy="10.5" r="2.3"/></svg></div>
-          <div class="txt"><b id="contact-address"></b></div>
-        </div>
-        <div class="contact-row">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11.4 21 3 12.6 3 2.7c0-.6.4-1 1-1H7.7c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8Z"/></svg></div>
-          <div class="txt"><b id="contact-phone"></b><span id="contact-phone-note"></span></div>
+          <div class="txt"><a id="contact-address" target="_blank" rel="noopener"></a></div>
         </div>
         <div class="contact-row">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
@@ -151,26 +112,46 @@
             <div class="hours-stack" id="contact-hours"></div>
           </div>
         </div>
-        <a href="#" class="contact-cta-big" id="contact-whatsapp" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.13-2.9-7C17.18 3.03 14.7 2 12.04 2Zm0 18.14h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.37c0-4.55 3.7-8.25 8.26-8.25 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.84c0 4.55-3.71 8.22-8.25 8.22Z"/></svg>
-          <span id="contact-cta"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker" data-reveal id="contact-eyebrow"></div>
+      <h2 data-reveal style="--delay:.05s" id="contact-title"></h2>
+    </div>
+    <div class="contact-card contact-card-solo" data-reveal style="--delay:.08s">
+      <div class="contact-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11.4 21 3 12.6 3 2.7c0-.6.4-1 1-1H7.7c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8Z"/></svg></div>
+        <div class="txt"><a id="contact-phone"></a><span id="contact-phone-note"></span></div>
+      </div>
+      <a href="#" class="contact-cta-big" id="contact-whatsapp" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.13-2.9-7C17.18 3.03 14.7 2 12.04 2Zm0 18.14h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.37c0-4.55 3.7-8.25 8.26-8.25 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.84c0 4.55-3.71 8.22-8.25 8.22Z"/></svg>
+        <span id="contact-cta"></span>
+      </a>
+      <div class="social-row">
+        <a href="#" class="social-pill" id="social-instagram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          <span id="social-instagram-label"></span>
         </a>
-        <div class="social-row">
-          <a href="#" class="social-pill" id="social-instagram" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
-            <span id="social-instagram-label"></span>
-          </a>
-        </div>
       </div>
     </div>
   </div>
 </section>
 
 <footer class="wrap">
-  <div class="footer-row">
-    <span class="fbrand" id="footer-brand"></span>
-    <span id="footer-meta"></span>
-    <a id="footer-insta" target="_blank" rel="noopener"></a>
+  <div class="footer-inner">
+    <div class="footer-row">
+      <span class="fbrand" id="footer-brand"></span>
+      <span id="footer-meta"></span>
+    </div>
+    <div class="foot-credit">
+      <span id="footer-credit-label"></span>
+      <a id="footer-credit-link" target="_blank" rel="noopener"></a>
+    </div>
   </div>
 </footer>
 
@@ -208,9 +189,44 @@
   }
 
   document.documentElement.lang = c.lang || "es";
-  document.title = `${c.brandName} — ${c.tagline}`;
+  document.title = u.pageTitle || `${c.brandName} — ${c.tagline}`;
   const description = document.querySelector('meta[name="description"]');
   if (description) description.content = u.metaDescription;
+
+  const address = c.address || {};
+  const addressText = address.full || c.address || "";
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    name: c.brandName,
+    legalName: c.legalName,
+    description: u.metaDescription,
+    telephone: c.phoneE164,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: address.street,
+      addressLocality: address.locality,
+      postalCode: address.postalCode,
+      addressCountry: address.country
+    },
+    geo: c.geo ? {
+      "@type": "GeoCoordinates",
+      latitude: c.geo.latitude,
+      longitude: c.geo.longitude
+    } : undefined,
+    hasMap: c.mapsUrl,
+    sameAs: c.instagramUrl ? [c.instagramUrl] : undefined,
+    openingHoursSpecification: (c.hours || []).filter((hour) => hour.opens).map((hour) => ({
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: hour.days,
+      opens: hour.opens,
+      closes: hour.closes
+    }))
+  };
+  const ldScript = document.createElement("script");
+  ldScript.type = "application/ld+json";
+  ldScript.textContent = JSON.stringify(jsonLd);
+  document.head.appendChild(ldScript);
   const theme = document.querySelector('meta[name="theme-color"]');
   if (theme && c.colors.cream) theme.content = c.colors.cream;
 
@@ -249,7 +265,7 @@
   document.getElementById("hero-secondary").textContent = u.heroSecondary;
   document.getElementById("hero-scroll").textContent = u.heroScroll;
   document.getElementById("meta-specialty-label").textContent = u.metaSpecialty;
-  document.getElementById("meta-specialty").textContent = c.tagline;
+  document.getElementById("meta-specialty").textContent = c.specialty || c.tagline;
   document.getElementById("meta-hours-label").textContent = u.metaHours;
   document.getElementById("meta-contact-label").textContent = u.metaContact;
   document.getElementById("meta-contact").textContent = c.phoneDisplay;
@@ -257,14 +273,18 @@
     document.getElementById("meta-hours").textContent = `${c.hours[0].day} · ${c.hours[0].time}`;
   }
 
-  const [line1, line2] = c.heroHeadlineLines;
   const title = document.getElementById("hero-title");
-  title.append(document.createTextNode(line1));
-  title.append(document.createElement("br"));
-  const accent = document.createElement("span");
-  accent.className = "accent-word";
-  accent.textContent = line2;
-  title.append(accent);
+  (c.heroHeadlineLines || []).forEach((line, index, lines) => {
+    if (index > 0) title.append(document.createElement("br"));
+    if (lines.length > 1 && index === lines.length - 1) {
+      const accent = document.createElement("span");
+      accent.className = "accent-word";
+      accent.textContent = line;
+      title.append(accent);
+    } else {
+      title.append(document.createTextNode(line));
+    }
+  });
 
   ["nav-whatsapp", "hero-whatsapp", "contact-whatsapp"].forEach((id) => {
     const el = document.getElementById(id);
@@ -274,14 +294,11 @@
 
   const heroInsta = document.getElementById("hero-instagram");
   const socialInsta = document.getElementById("social-instagram");
-  const footerInsta = document.getElementById("footer-insta");
-  [heroInsta, socialInsta, footerInsta].forEach((el) => {
+  [heroInsta, socialInsta].filter(Boolean).forEach((el) => {
     el.href = c.instagramUrl;
     el.setAttribute("aria-label", c.instagramHandle);
   });
-  heroInsta.setAttribute("aria-label", c.instagramHandle);
   document.getElementById("social-instagram-label").textContent = c.instagramHandle;
-  footerInsta.textContent = c.instagramHandle;
 
   const heroEl = document.querySelector(".hero");
   const heroMedia = document.getElementById("hero-media");
@@ -297,51 +314,43 @@
     heroProbe.src = c.heroImage;
   }
 
-  document.getElementById("about-tag").textContent = c.brandName;
-  document.getElementById("ritual-eyebrow").textContent = u.ritualEyebrow;
-  document.getElementById("ritual-title").textContent = u.ritualTitle;
-  const ritualBody = document.getElementById("ritual-body");
-  ritualBody.innerHTML = (c.ritualSteps || []).map((step, index) => `
-    <p class="body-p" data-reveal style="--delay:${0.1 + index * 0.05}s">${esc(step.text)}</p>
-  `).join("");
-
-  const aboutInner = document.getElementById("about-card-inner");
-  const aboutPhoto = document.getElementById("about-photo");
-  if (c.visitImage && aboutInner && aboutPhoto) {
-    const portrait = new Image();
-    portrait.onload = () => {
-      aboutPhoto.style.backgroundImage = `url('${c.visitImage.replace(/'/g, "%27")}')`;
-      aboutInner.classList.add("has-photo");
-    };
-    portrait.src = c.visitImage;
-  }
-
-  const quoteBlock = document.getElementById("quote-block");
-  if (c.heroSub) {
-    document.getElementById("quote-text").textContent = `“${c.heroSub}”`;
-    document.getElementById("quote-who").textContent = c.brandName;
-  } else {
-    quoteBlock.hidden = true;
-  }
-
   document.getElementById("services-eyebrow").textContent = u.servicesEyebrow;
   document.getElementById("services-title").textContent = u.servicesTitle;
   document.getElementById("gallery-eyebrow").textContent = u.galleryEyebrow;
   document.getElementById("gallery-title").textContent = u.galleryTitle;
-  document.getElementById("testimonials-eyebrow").textContent = u.testimonialsEyebrow;
-  document.getElementById("testimonials-title").textContent = u.testimonialsTitle;
   document.getElementById("visit-eyebrow").textContent = u.visitEyebrow;
   document.getElementById("visit-title").textContent = u.visitTitle;
-  document.getElementById("contact-address").textContent = c.address;
-  document.getElementById("contact-phone").textContent = c.phoneDisplay;
-  document.getElementById("contact-phone-note").textContent = u.footerCta;
+  document.getElementById("contact-eyebrow").textContent = u.contactEyebrow;
+  document.getElementById("contact-title").textContent = u.contactTitle;
+
+  const addressLink = document.getElementById("contact-address");
+  addressLink.textContent = addressText;
+  addressLink.href = c.mapsUrl;
+  const phoneLink = document.getElementById("contact-phone");
+  phoneLink.textContent = c.phoneDisplay;
+  phoneLink.href = `tel:${c.phoneE164}`;
+  document.getElementById("contact-phone-note").hidden = true;
   document.getElementById("contact-hours-title").textContent = u.metaHours;
   document.getElementById("contact-cta").textContent = u.footerCta;
   document.getElementById("contact-hours").innerHTML = (c.hours || []).map((hour) => `
     <div class="hours-line"><span>${esc(hour.day)}</span><span>${esc(hour.time)}</span></div>
   `).join("");
-  document.getElementById("footer-brand").textContent = `${c.brandName} — ${c.tagline}`;
-  document.getElementById("footer-meta").textContent = `${c.phoneDisplay} · ${c.address}`;
+
+  const mapFrame = document.getElementById("map-frame");
+  if (mapFrame && c.mapsEmbedUrl) {
+    mapFrame.src = c.mapsEmbedUrl;
+    mapFrame.title = u.mapTitle;
+  }
+  const mapLink = document.getElementById("map-link");
+  mapLink.href = c.mapsUrl;
+  mapLink.textContent = u.mapCta;
+
+  document.getElementById("footer-brand").textContent = c.legalName || c.brandName;
+  document.getElementById("footer-meta").textContent = `${c.phoneDisplay} · ${addressText}`;
+  document.getElementById("footer-credit-label").textContent = c.credit.label;
+  const creditLink = document.getElementById("footer-credit-link");
+  creditLink.href = c.credit.url;
+  creditLink.textContent = c.credit.name;
 
   const lightbox = document.getElementById("gallery-lightbox");
   lightbox.setAttribute("aria-label", u.lightboxLabel);
@@ -349,45 +358,28 @@
   document.getElementById("lightbox-prev").setAttribute("aria-label", u.lightboxPrev);
   document.getElementById("lightbox-next").setAttribute("aria-label", u.lightboxNext);
 
-  const chevronSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
   const servicesGrid = document.getElementById("services-grid");
+  const itemList = (items) => (items || []).map((item) => `<li>${esc(item)}</li>`).join("");
   servicesGrid.innerHTML = (c.services || []).map((service, index) => {
-    const details = (service.items || []).map((item) => `<li>${esc(item)}</li>`).join("");
+    const groups = service.groups && service.groups.length
+      ? `<div class="service-groups">${service.groups.map((group) => `
+          <div class="service-group">
+            <h4>${esc(group.name)}</h4>
+            <ul class="service-details">${itemList(group.items)}</ul>
+          </div>`).join("")}</div>`
+      : `<ul class="service-details">${itemList(service.items)}</ul>`;
+    const kicker = service.label && service.label !== service.name
+      ? `<p class="service-kicker">${esc(service.label)}</p>`
+      : "";
+    const price = service.price ? `<p class="service-price">${esc(service.price)}</p>` : "";
     return `
-      <div class="service-item" data-reveal style="--delay:${Math.min(index, 6) * 0.05}s">
-        <button type="button" class="service-trigger" aria-expanded="false" id="service-trigger-${index}" aria-controls="service-panel-${index}">
-          <div class="service-trigger-text">
-            <p class="service-kicker">${esc(service.label)}</p>
-            <h3>${esc(service.name)}</h3>
-            <p class="service-teaser">${esc(service.description)}</p>
-          </div>
-          <span class="service-chevron">${chevronSvg}</span>
-        </button>
-        <div class="service-panel" id="service-panel-${index}" role="region" aria-labelledby="service-trigger-${index}">
-          <div class="service-panel-inner">
-            <div class="service-panel-body">
-              <ul class="service-details">${details}</ul>
-            </div>
-          </div>
-        </div>
-      </div>`;
+      <article class="service-card${service.wide ? " is-wide" : ""}" data-reveal style="--delay:${Math.min(index, 6) * 0.05}s">
+        ${kicker}
+        <h3>${esc(service.name)}</h3>
+        ${price}
+        ${groups}
+      </article>`;
   }).join("");
-
-  servicesGrid.addEventListener("click", (event) => {
-    const trigger = event.target.closest(".service-trigger");
-    if (!trigger || !servicesGrid.contains(trigger)) return;
-    const item = trigger.closest(".service-item");
-    const willOpen = !item.classList.contains("is-open");
-    servicesGrid.querySelectorAll(".service-item.is-open").forEach((openItem) => {
-      openItem.classList.remove("is-open");
-      const button = openItem.querySelector(".service-trigger");
-      if (button) button.setAttribute("aria-expanded", "false");
-    });
-    if (willOpen) {
-      item.classList.add("is-open");
-      trigger.setAttribute("aria-expanded", "true");
-    }
-  });
 
   const ritualViewport = document.getElementById("ritual-carousel");
   const ritualTrack = document.getElementById("ritual-track");
@@ -503,31 +495,49 @@
     });
   }
 
-  document.getElementById("testimonials-grid").innerHTML = (c.testimonials || []).map((item, index) => `
-    <div class="testimonial-card" data-reveal style="--delay:${index * 0.08}s">
-      <blockquote>“${esc(item.quote)}”</blockquote>
-      <div class="author">— ${esc(item.name)}</div>
-    </div>
-  `).join("");
+  const testimonialsGrid = document.getElementById("testimonials-grid");
+  if (testimonialsGrid && c.testimonials && c.testimonials.length) {
+    testimonialsGrid.innerHTML = c.testimonials.map((item, index) => `
+      <div class="testimonial-card" data-reveal style="--delay:${index * 0.08}s">
+        <blockquote>“${esc(item.quote)}”</blockquote>
+        <div class="author">— ${esc(item.name)}</div>
+      </div>
+    `).join("");
+  }
 
   const galleryGrid = document.getElementById("gallery-grid");
   const galleryImages = [];
-  galleryGrid.innerHTML = (c.gallery || []).map((src, index) => `
-    <div class="gallery-tile" data-parallax-tile data-gallery-idx="${index}" role="button" tabindex="0" aria-label="${esc(u.galleryImageAlt)} ${index + 1}">
-      <img src="${esc(src)}" alt="${esc(u.galleryImageAlt)} ${index + 1}" class="gallery-img">
-      <div class="zoom-hint" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6" stroke-linecap="round"/></svg>
-      </div>
-      <div class="ph gallery-fallback">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 17l-5.5-5.5L9 18"/></svg>
-        <span>${esc(u.gallerySoon)}</span>
-      </div>
-    </div>
-  `).join("");
+  const gallerySrc = (item) => {
+    if (!item) return "";
+    if (typeof item === "string") return item;
+    return item.src || "";
+  };
+  galleryGrid.innerHTML = (c.gallery || []).map((item, index) => {
+    const src = gallerySrc(item);
+    const label = (item && item.placeholder) || u.gallerySoon;
+    if (!src) {
+      return `
+        <div class="gallery-tile is-placeholder" data-parallax-tile>
+          <span class="gallery-placeholder-label">${esc(label)}</span>
+        </div>`;
+    }
+    return `
+      <div class="gallery-tile" data-parallax-tile data-gallery-idx="${index}" role="button" tabindex="0" aria-label="${esc(u.galleryImageAlt)} ${index + 1}">
+        <img src="${esc(src)}" alt="${esc((item && item.alt) || u.galleryImageAlt)} ${index + 1}" class="gallery-img">
+        <div class="zoom-hint" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6" stroke-linecap="round"/></svg>
+        </div>
+        <div class="ph gallery-fallback">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 17l-5.5-5.5L9 18"/></svg>
+          <span>${esc(u.gallerySoon)}</span>
+        </div>
+      </div>`;
+  }).join("");
 
   galleryGrid.querySelectorAll(".gallery-tile").forEach((tile) => {
     const img = tile.querySelector(".gallery-img");
     const fallback = tile.querySelector(".gallery-fallback");
+    if (!img || !fallback) return;
     const index = parseInt(tile.dataset.galleryIdx, 10);
     const probe = new Image();
     probe.onload = () => {
