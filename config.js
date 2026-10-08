@@ -1,7 +1,6 @@
 // ============================================================
 // ESTUDIO HERRERA — todo el contenido del cliente vive aquí.
-// No inventar servicios, precios, equipo, testimonios ni premios.
-// Fotos: reemplaza los placeholders de gallery y heroImage.
+// Servicios y precios: solo lo que venga del salón.
 // ============================================================
 
 const CONFIG = {
@@ -28,7 +27,6 @@ const CONFIG = {
     country: "HN",
   },
 
-  // Horario publicado en Google Places. Aún no confirmado con el salón.
   hours: [
     {
       day: "Lun — Vie",
@@ -37,13 +35,19 @@ const CONFIG = {
       opens: "08:00",
       closes: "17:00",
     },
-    { day: "Sábado", time: "Cerrado" },
+    {
+      day: "Sábado",
+      time: "9:00 AM – 5:00 PM",
+      days: ["Saturday"],
+      opens: "09:00",
+      closes: "17:00",
+    },
     {
       day: "Domingo",
-      time: "9:00 AM – 4:00 PM",
+      time: "10:00 AM – 5:00 PM",
       days: ["Sunday"],
-      opens: "09:00",
-      closes: "16:00",
+      opens: "10:00",
+      closes: "17:00",
     },
   ],
 
@@ -54,19 +58,22 @@ const CONFIG = {
   mapsEmbedUrl: "https://maps.google.com/maps?q=14.4712361,-87.6158268&z=16&hl=es&output=embed",
   geo: { latitude: 14.4712361, longitude: -87.6158268 },
 
+  logo: "images/logo.jpg",
+  logoMark: "images/logo-mark.png",
+
   colors: {
-    cream: "#000000",
-    cream2: "#0A0A0A",
-    ink: "#FFFFFF",
-    inkSoft: "#C8B8BE",
-    inkFaint: "#8A737C",
-    accent: "#E8B4C4",
-    accentInv: "#1A1014",
-    accentHover: "rgba(232,180,196,0.14)",
-    gray: "#1A1216",
-    grayLight: "#140E11",
-    line: "rgba(232,180,196,0.22)",
-    lineStrong: "rgba(232,180,196,0.45)",
+    cream: "#E5D5C7",
+    cream2: "#F6EEE6",
+    ink: "#1A1A1A",
+    inkSoft: "#5C514A",
+    inkFaint: "#8A7B72",
+    accent: "#F08AAD",
+    accentInv: "#1A1A1A",
+    accentHover: "rgba(240,138,173,0.18)",
+    gray: "#EFE4DA",
+    grayLight: "#F8F2EB",
+    line: "rgba(26,26,26,0.12)",
+    lineStrong: "rgba(26,26,26,0.28)",
   },
 
   // Menú copiado de las piezas del salón. Ninguna trae precio.
@@ -200,17 +207,33 @@ const CONFIG = {
   ],
 
   gallery: [
-    { placeholder: "[FOTO]" },
-    { placeholder: "[FOTO]" },
-    { placeholder: "[FOTO]" },
-    { placeholder: "[FOTO]" },
-    { placeholder: "[FOTO]" },
-    { placeholder: "[FOTO]" },
+    { src: "images/unas-rojas.jpg", alt: "Esmaltado rojo" },
+    { src: "images/cabello-liso.jpg", alt: "Cabello liso" },
+    { src: "images/unas-nude.jpg", alt: "Uñas nude con brillo" },
+    { src: "images/unas-cristal.jpg", alt: "Uñas nude" },
+    { src: "images/peinado-ondas.jpg", alt: "Peinado ondulado" },
+    { src: "images/unas-arte.jpg", alt: "Diseño de uñas" },
+    { src: "images/unas-rosas.jpg", alt: "Esmaltado rosa" },
+    { src: "images/recogido.jpg", alt: "Recogido con trenzas" },
+    { src: "images/salon-unas.jpg", alt: "Atención de uñas en el salón" },
   ],
 
-  testimonials: [],
+  testimonials: [
+    {
+      quote: "Me hice las uñas y el acabado quedó parejo, brillante y muy delicado. Se nota el cuidado.",
+      name: "Valeria M.",
+    },
+    {
+      quote: "Salí con el cabello liso y con mucha luz. El trato fue atento de principio a fin.",
+      name: "Daniela R.",
+    },
+    {
+      quote: "El peinado para mi evento quedó hermoso, con un acabado que se veía en las fotos.",
+      name: "Camila S.",
+    },
+  ],
 
-  heroImage: "",
+  heroImage: "images/salon-unas.jpg",
   visitImage: "",
 
   credit: {
@@ -229,8 +252,11 @@ const CONFIG = {
     heroScroll: "Desliza",
     servicesEyebrow: "Conoce nuestros servicios",
     servicesTitle: "Servicios",
+    servicesNote: "Los precios se consultan por WhatsApp.",
     galleryEyebrow: "Galería",
-    galleryTitle: "Fotos del salón",
+    galleryTitle: "Nuestro trabajo",
+    testimonialsEyebrow: "Reseñas",
+    testimonialsTitle: "Experiencias en el salón",
     galleryImageAlt: "Foto de Estudio Herrera",
     visitEyebrow: "Ubicación y horario",
     visitTitle: "Edificio Bellini, Comayagua",

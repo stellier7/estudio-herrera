@@ -8,4 +8,4 @@ Open `index.html` in a browser. No build step. The root `index.html` is ready fo
 
 Edit **`config.js`** only. Business facts, services, hours, colors, and photo slots live there.
 
-Gallery tiles are `[FOTO]` placeholders. Drop salon photos in `images/` and set each gallery item to `{ src: "images/foto.jpg", alt: "..." }`. Set `heroImage` the same way when a hero photo is ready.
+Photos and the logo live in `images/`. Colors, hours, services, and reviews are in `config.js`.
