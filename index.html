@@ -412,6 +412,7 @@
 
   const servicesGrid = document.getElementById("services-grid");
   const itemList = (items) => (items || []).map((item) => `<li>${esc(item)}</li>`).join("");
+  const chevronSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
   servicesGrid.innerHTML = (c.services || []).map((service, index) => {
     const groups = service.groups && service.groups.length
       ? `<div class="service-groups">${service.groups.map((group) => `
@@ -426,12 +427,32 @@
     const price = service.price ? `<p class="service-price">${esc(service.price)}</p>` : "";
     return `
       <article class="service-card${service.wide ? " is-wide" : ""}" data-reveal style="--delay:${Math.min(index, 6) * 0.05}s">
-        ${kicker}
-        <h3>${esc(service.name)}</h3>
-        ${price}
-        ${groups}
+        <button type="button" class="service-trigger" aria-expanded="false" id="service-trigger-${index}" aria-controls="service-panel-${index}">
+          <span class="service-trigger-text">
+            ${kicker}
+            <h3>${esc(service.name)}</h3>
+          </span>
+          <span class="service-chevron">${chevronSvg}</span>
+        </button>
+        <div class="service-panel" id="service-panel-${index}" role="region" aria-labelledby="service-trigger-${index}">
+          <div class="service-panel-inner">
+            <div class="service-panel-body">
+              ${price}
+              ${groups}
+            </div>
+          </div>
+        </div>
       </article>`;
   }).join("");
+
+  servicesGrid.addEventListener("click", (event) => {
+    const trigger = event.target.closest(".service-trigger");
+    if (!trigger || !servicesGrid.contains(trigger)) return;
+    const card = trigger.closest(".service-card");
+    const willOpen = !card.classList.contains("is-open");
+    card.classList.toggle("is-open", willOpen);
+    trigger.setAttribute("aria-expanded", willOpen ? "true" : "false");
+  });
 
   const ritualViewport = document.getElementById("ritual-carousel");
   const ritualTrack = document.getElementById("ritual-track");

@@ -607,7 +607,7 @@ section { position: relative; padding: 120px 0; overflow-x: clip; }
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
-.service-trigger:hover { background: rgba(255,255,255,0.03); }
+.service-trigger:hover { background: var(--accent-hover); }
 .service-trigger:focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: -2px;
@@ -652,7 +652,8 @@ section { position: relative; padding: 120px 0; overflow-x: clip; }
   grid-template-rows: 0fr;
   transition: grid-template-rows .4s var(--ease);
 }
-.service-item.is-open .service-panel { grid-template-rows: 1fr; }
+.service-item.is-open .service-panel,
+.service-card.is-open .service-panel { grid-template-rows: 1fr; }
 .service-panel-inner { overflow: hidden; min-height: 0; }
 .service-panel-body {
   padding: 0 clamp(16px, 3vw, 24px) clamp(18px, 2.5vw, 24px);
@@ -699,16 +700,28 @@ section { position: relative; padding: 120px 0; overflow-x: clip; }
 .service-card {
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: clamp(22px, 3vw, 32px);
+  padding: 0;
   background: rgba(255,252,248,0.55);
+  overflow: hidden;
 }
 .service-card.is-wide { grid-column: 1 / -1; }
-.service-card h3 {
-  font-size: clamp(26px, 3vw, 36px);
+.service-card .service-trigger {
+  align-items: center;
+  padding: clamp(20px, 2.6vw, 28px);
+}
+.service-card .service-trigger h3 {
+  font-size: clamp(22px, 2.6vw, 32px);
   line-height: 1.15;
-  margin-bottom: 18px;
+  margin: 0;
 }
 .service-card .service-kicker { margin-bottom: 8px; }
+.service-card.is-open .service-chevron {
+  transform: rotate(180deg);
+  color: var(--ink);
+}
+.service-card .service-panel-body {
+  padding: 0 clamp(20px, 2.6vw, 28px) clamp(22px, 2.8vw, 30px);
+}
 .service-groups {
   display: grid;
   grid-template-columns: 1fr 1fr;
