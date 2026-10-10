@@ -398,7 +398,7 @@
   mapLink.textContent = u.mapCta;
 
   document.getElementById("footer-brand").textContent = c.legalName || c.brandName;
-  document.getElementById("footer-meta").textContent = `${c.phoneDisplay} · ${addressText}`;
+  document.getElementById("footer-meta").textContent = addressText;
   document.getElementById("footer-credit-label").textContent = c.credit.label;
   const creditLink = document.getElementById("footer-credit-link");
   creditLink.href = c.credit.url;

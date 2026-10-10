@@ -799,8 +799,9 @@ section { position: relative; padding: 120px 0; overflow-x: clip; }
 }
 
 .foot-credit {
-  margin-top: 20px;
+  margin-top: 18px;
   padding-bottom: 12px;
+  text-align: center;
 }
 .foot-credit a {
   color: var(--ink);
@@ -1160,12 +1161,12 @@ footer {
   color: var(--ink-faint);
   font-size: 13.5px;
 }
+.footer-inner { text-align: center; }
 .footer-row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
+  gap: 8px;
   align-items: center;
-  justify-content: space-between;
 }
 footer .fbrand {
   font-family: 'Fraunces', serif;
