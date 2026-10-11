@@ -56,6 +56,8 @@ const CONFIG = {
   instagramUrl: "https://www.instagram.com/eestudio_hherrera",
   facebookUrl: "https://www.facebook.com/profile.php?id=61555703168558",
   facebookLabel: "Facebook",
+  tiktokUrl: "https://www.tiktok.com/@eestudio_hherrera",
+  tiktokLabel: "TikTok",
 
   mapsUrl: "https://maps.app.goo.gl/PR8RLDJ6jXosQWdd6",
   mapsEmbedUrl: "https://maps.google.com/maps?q=14.4712361,-87.6158268&z=16&hl=es&output=embed",

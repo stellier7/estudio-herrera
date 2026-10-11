@@ -338,7 +338,7 @@ nav {
 .hero-social {
   margin-top: 22px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 10px;
   align-items: center;
 }
@@ -1125,21 +1125,23 @@ body.lightbox-open { overflow: hidden; }
 
 .social-row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 16px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 18px;
 }
 .social-pill {
-  flex: 0 1 auto;
+  flex: none;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 11px 18px;
-  border-radius: 100px;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 12px;
   border: 1px solid var(--line);
-  font-size: 13px;
-  font-weight: 600;
   background: transparent;
+  color: var(--ink);
   transition: transform .35s var(--ease), border-color .35s, background .3s;
 }
 .social-pill:hover {
@@ -1147,7 +1149,7 @@ body.lightbox-open { overflow: hidden; }
   border-color: var(--line-strong);
   background: var(--accent-hover);
 }
-.social-pill svg { width: 16px; height: 16px; }
+.social-pill svg { width: 18px; height: 18px; }
 
 .quote-block { padding: 40px 8px 0; }
 .quote-block p {
