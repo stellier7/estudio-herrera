@@ -9,11 +9,11 @@ const CONFIG = {
   brandName: "Estudio Herrera",
   legalName: "Estudio Herrera S. de R. L.",
   siteUrl: "https://estudio-herrera-two.vercel.app",
-  tagline: "Es tiempo de brillar",
+  tagline: "Belleza y Exclusividad",
   specialty: "Salón de belleza",
   heroEyebrow: "Salón de belleza en Comayagua",
   heroHeadlineLines: ["Estudio", "Herrera"],
-  heroSub: "Es tiempo de brillar",
+  heroSub: "Belleza y Exclusividad",
 
   whatsappNumber: "50432799695",
   whatsappDefaultMessage: "Hola, quisiera agendar una cita en Estudio Herrera",
