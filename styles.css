@@ -774,6 +774,17 @@ section { position: relative; padding: 120px 0; overflow-x: clip; }
 }
 .map-link:hover { background: var(--accent-hover); }
 .contact-card-solo { max-width: 640px; }
+@media (min-width: 981px) {
+  #contacto .section-head,
+  #contacto .contact-card-solo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #contacto .section-head {
+    align-items: center;
+    text-align: center;
+  }
+}
 .contact-row .txt a {
   font-family: 'Fraunces', serif;
   font-weight: 500;
