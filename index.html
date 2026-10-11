@@ -5,16 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="description" content="Estudio Herrera, salón de belleza en Golf Club, Edificio Bellini, 2do. Nivel, Comayagua. Cabello, maquillaje, pestañas, cejas, spa de manos y pies, depilación con cera y paquetes para bodas. Agenda por WhatsApp.">
 <meta name="theme-color" content="#E5D5C7">
+<meta property="og:site_name" content="Estudio Herrera">
+<meta property="og:locale" content="es_HN">
 <meta property="og:title" content="Estudio Herrera | Salón de Belleza en Comayagua">
 <meta property="og:description" content="Estudio Herrera, salón de belleza en Golf Club, Edificio Bellini, 2do. Nivel, Comayagua. Cabello, maquillaje, pestañas, cejas, spa de manos y pies, depilación con cera y paquetes para bodas. Agenda por WhatsApp.">
-<meta property="og:image" content="images/logo.jpg">
+<meta property="og:url" content="https://estudio-herrera-two.vercel.app/">
+<meta property="og:image" content="https://estudio-herrera-two.vercel.app/images/og-image.jpg">
+<meta property="og:image:secure_url" content="https://estudio-herrera-two.vercel.app/images/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="Estudio Herrera — Belleza & Exclusividad">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="images/logo.jpg">
+<meta name="twitter:title" content="Estudio Herrera | Salón de Belleza en Comayagua">
+<meta name="twitter:description" content="Estudio Herrera, salón de belleza en Golf Club, Edificio Bellini, 2do. Nivel, Comayagua. Agenda por WhatsApp.">
+<meta name="twitter:image" content="https://estudio-herrera-two.vercel.app/images/og-image.jpg">
 <title>Estudio Herrera | Salón de Belleza en Comayagua</title>
-<link rel="icon" href="images/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="images/favicon-16.png" type="image/png" sizes="16x16">
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/images/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -222,12 +233,28 @@
 
   const address = c.address || {};
   const addressText = address.full || c.address || "";
+  const siteUrl = String(c.siteUrl || "").replace(/\/$/, "");
+  const absoluteUrl = (path) => {
+    if (!path) return "";
+    if (/^https?:\/\//i.test(path)) return path;
+    if (!siteUrl) return path;
+    return `${siteUrl}/${String(path).replace(/^\//, "")}`;
+  };
+  const shareImage = absoluteUrl(c.ogImage || c.logo);
+
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  if (ogUrl && siteUrl) ogUrl.content = `${siteUrl}/`;
+  document.querySelectorAll('meta[property="og:image"], meta[property="og:image:secure_url"], meta[name="twitter:image"]').forEach((el) => {
+    if (shareImage) el.content = shareImage;
+  });
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
     name: c.brandName,
     legalName: c.legalName,
-    image: c.logo,
+    url: siteUrl || undefined,
+    image: absoluteUrl(c.logo) || c.logo,
     description: u.metaDescription,
     telephone: c.phoneE164,
     address: {
@@ -282,10 +309,6 @@
     navLogo.src = c.logoMark;
     navLogo.hidden = false;
   }
-  const ogImage = document.querySelector('meta[property="og:image"]');
-  if (ogImage && c.logo) ogImage.content = c.logo;
-  const twitterImage = document.querySelector('meta[name="twitter:image"]');
-  if (twitterImage && c.logo) twitterImage.content = c.logo;
 
   const brandParts = c.brandName.trim().split(/\s+/);
   const navName = document.getElementById("nav-name");

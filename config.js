@@ -8,6 +8,7 @@ const CONFIG = {
 
   brandName: "Estudio Herrera",
   legalName: "Estudio Herrera S. de R. L.",
+  siteUrl: "https://estudio-herrera-two.vercel.app",
   tagline: "Es tiempo de brillar",
   specialty: "Salón de belleza",
   heroEyebrow: "Salón de belleza en Comayagua",
@@ -62,6 +63,7 @@ const CONFIG = {
 
   logo: "images/logo.jpg",
   logoMark: "images/logo-mark.png",
+  ogImage: "images/og-image.jpg",
 
   colors: {
     cream: "#E5D5C7",
