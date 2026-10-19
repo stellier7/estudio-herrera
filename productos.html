@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Catálogo de productos profesionales — Estudio Herrera, salón de belleza en Comayagua.">
+<meta name="theme-color" content="#E5D5C7">
+<meta property="og:title" content="Catálogo — Estudio Herrera">
+<meta property="og:description" content="Productos profesionales disponibles en Estudio Herrera, Comayagua.">
+<meta property="og:image" content="https://estudio-herrera-two.vercel.app/images/og-image.jpg">
+<meta property="og:type" content="website">
+<title>Catálogo — Estudio Herrera</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav scrolled" id="nav">
+  <a href="index.html" class="nav-brand" id="nav-brand">
+    <img src="images/logo-mark.png" alt="Estudio Herrera" class="nav-logo" id="nav-logo" width="160" height="48">
+    <span id="nav-name"></span>
+  </a>
+  <div class="nav-links">
+    <a href="productos.html" class="nav-link" id="nav-products" aria-current="page">Productos</a>
+  </div>
+  <a href="index.html#contacto" class="nav-cta" id="nav-whatsapp-link">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.13-2.9-7C17.18 3.03 14.7 2 12.04 2Zm0 18.14h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.37c0-4.55 3.7-8.25 8.26-8.25 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.84c0 4.55-3.71 8.22-8.25 8.22Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.4-.12-.56.13-.17.25-.65.81-.79.97-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.46-1.37-1.71-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.12-.15.16-.25.24-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.48c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.4 1.02 2.57.12.17 1.75 2.67 4.24 3.75.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28Z"/></svg>
+    <span id="nav-cta-label"></span>
+  </a>
+</nav>
+
+<main class="page-catalog">
+  <div class="wrap">
+    <a href="index.html" class="catalog-back" id="catalog-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span id="catalog-back-label">Volver al inicio</span>
+    </a>
+
+    <div class="section-head">
+      <div class="kicker" id="catalog-kicker">Productos</div>
+      <h1 id="catalog-title">Catálogo</h1>
+      <p id="catalog-subtitle"></p>
+    </div>
+
+    <div class="catalog-toolbar">
+      <div class="catalog-chips" id="catalog-chips" role="toolbar" aria-label="Filtrar por categoría"></div>
+      <input type="search" class="catalog-search" id="catalog-search" placeholder="Buscar producto…" autocomplete="off">
+    </div>
+
+    <div class="catalog-grid" id="catalog-grid"></div>
+    <p class="catalog-empty" id="catalog-empty" hidden></p>
+  </div>
+</main>
+
+<footer class="wrap">
+  <div class="footer-inner">
+    <div class="footer-row">
+      <span class="fbrand" id="footer-brand"></span>
+      <span id="footer-meta"></span>
+    </div>
+    <div class="foot-credit">
+      <span id="footer-credit-label">Desarrollado por</span>
+      <a id="footer-credit-link" href="https://www.iagodigital.com/" target="_blank" rel="noopener">IAGO Digital</a>
+    </div>
+  </div>
+</footer>
+
+<div class="product-modal" id="product-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="product-modal-name">
+  <button type="button" class="product-modal-backdrop" id="product-modal-backdrop" tabindex="-1" aria-label="Cerrar"></button>
+  <div class="product-modal-panel">
+    <button type="button" class="product-modal-close" id="product-modal-close" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg>
+    </button>
+    <div class="product-modal-media" id="product-modal-media">
+      <img src="" alt="" id="product-modal-img" decoding="async">
+    </div>
+    <div class="product-modal-copy">
+      <span class="product-tag" id="product-modal-category"></span>
+      <h2 id="product-modal-name"></h2>
+      <p class="product-price" id="product-modal-price" hidden></p>
+      <div class="product-modal-actions">
+        <button type="button" class="btn btn-primary" id="product-modal-add">Agregar al carrito</button>
+        <a class="btn btn-ghost" id="product-modal-whatsapp" href="#" target="_blank" rel="noopener">
+          Consultar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="products.js"></script>
+<script>
+(function () {
+  const c = CONFIG;
+  const u = c.ui || {};
+
+  if (window.ProductsUI) {
+    ProductsUI.applyBrandChrome();
+    ProductsUI.initCartUI();
+    ProductsUI.initCatalogPage();
+  }
+
+  document.title = `${u.catalogTitle || "Catálogo"} — ${c.brandName}`;
+  const description = document.querySelector('meta[name="description"]');
+  if (description) {
+    description.content = `${u.catalogTitle || "Catálogo"} de productos — ${c.brandName}. ${c.tagline || ""}`.trim();
+  }
+  const theme = document.querySelector('meta[name="theme-color"]');
+  if (theme && c.colors && c.colors.cream) theme.content = c.colors.cream;
+
+  const backLabel = document.getElementById("catalog-back-label");
+  if (backLabel) backLabel.textContent = u.catalogBack || "Volver al inicio";
+
+  const kicker = document.getElementById("catalog-kicker");
+  if (kicker) kicker.textContent = u.navProducts || "Productos";
+
+  const navCta = document.getElementById("nav-whatsapp-link");
+  if (navCta) {
+    const wa = `https://wa.me/${c.whatsappNumber}?text=${encodeURIComponent(c.whatsappDefaultMessage || "")}`;
+    navCta.href = wa;
+    navCta.setAttribute("aria-label", u.whatsappLabel || "WhatsApp");
+    navCta.target = "_blank";
+    navCta.rel = "noopener";
+  }
+
+  if (c.credit) {
+    const creditLabel = document.getElementById("footer-credit-label");
+    const creditLink = document.getElementById("footer-credit-link");
+    if (creditLabel) creditLabel.textContent = c.credit.label || "Desarrollado por";
+    if (creditLink) {
+      creditLink.href = c.credit.url || creditLink.href;
+      creditLink.textContent = c.credit.name || "IAGO Digital";
+    }
+  }
+})();
+</script>
+</body>
+</html>

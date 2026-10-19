@@ -8,4 +8,6 @@ Open `index.html` in a browser. No build step. The root `index.html` is ready fo
 
 Edit **`config.js`** only. Business facts, services, hours, colors, and photo slots live there.
 
-Photos and the logo live in `images/`. Colors, hours, services, and reviews are in `config.js`.
+Photos and the logo live in `images/`. Colors, hours, services, reviews, and the product demo catalog are in `config.js`.
+
+Open `productos.html` for the full catalog. Featured products also appear on the home page.
