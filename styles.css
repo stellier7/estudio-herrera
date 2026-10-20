@@ -1228,6 +1228,9 @@ body:has(.hero.has-hero-image) .nav:not(.scrolled) .nav-link[aria-current="page"
   position: relative;
   margin: 0 calc(-1 * clamp(20px, 5vw, 64px));
   padding: 8px 0 28px;
+  overflow: hidden;
+  touch-action: pan-y;
+  cursor: grab;
   --marquee-fade: clamp(28px, 6vw, 72px);
   -webkit-mask-image: linear-gradient(
     to right,
@@ -1244,15 +1247,24 @@ body:has(.hero.has-hero-image) .nav:not(.scrolled) .nav-link[aria-current="page"
     transparent 100%
   );
 }
+.products-marquee.is-dragging {
+  cursor: grabbing;
+  touch-action: none;
+}
+.products-marquee.is-dragging .product-card,
+.products-marquee.is-dragging .product-card-add {
+  pointer-events: none;
+}
 .products-marquee-track {
   display: flex;
   gap: 18px;
   width: max-content;
   will-change: transform;
+  transform: translate3d(0, 0, 0);
   animation: product-marquee 48s linear infinite;
 }
-.products-marquee.is-paused .products-marquee-track {
-  animation-play-state: paused;
+.products-marquee.is-js-marquee .products-marquee-track {
+  animation: none;
 }
 .products-marquee.is-reduced {
   -webkit-mask-image: none;
@@ -1263,9 +1275,12 @@ body:has(.hero.has-hero-image) .nav:not(.scrolled) .nav-link[aria-current="page"
   scroll-snap-type: x proximity;
   padding-inline: clamp(20px, 5vw, 64px);
   margin: 0;
+  cursor: auto;
+  touch-action: auto;
 }
 .products-marquee.is-reduced .products-marquee-track {
   animation: none;
+  transform: none !important;
   padding-bottom: 4px;
 }
 .products-marquee.is-reduced .product-card {
@@ -1275,7 +1290,7 @@ body:has(.hero.has-hero-image) .nav:not(.scrolled) .nav-link[aria-current="page"
   pointer-events: auto;
 }
 .products-marquee-track .product-card {
-  cursor: default;
+  cursor: inherit;
 }
 @keyframes product-marquee {
   from { transform: translateX(0); }
